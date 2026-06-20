@@ -1,0 +1,4 @@
+name,ip,role
+Router-1,192.168.1.1,core-router
+Switch-1,192.168.1.2,access-switch
+Firewall-1,192.168.1.3,security
