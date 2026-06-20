@@ -1,21 +1,35 @@
 # Network Automation Toolkit
 
-A simple Python project for basic network automation.
+A simple Python-based Network Health Check demo project.
 
-## What this project does
-This script connects to network devices via SSH and runs basic commands like checking interface status.
+## What This Project Does
 
-## Requirements
-- Python 3
-- Netmiko
+- Reads network devices from a CSV inventory file
+- Simulates connecting to each device
+- Runs a sample network command
+- Displays structured output
 
-Install dependency:
+This project demonstrates basic Network Automation concepts using Python.
 
-pip install netmiko
+## Project Structure
 
-## Run the script
+Network-Automation-Toolkit/
+│
+├── main.py
+├── devices.csv
+├── requirements.txt
+└── README.md
+
+## How to Run
+
+Make sure you have Python 3 installed.
+
+Run:
 
 python main.py
 
 ## Author
-Alireza Jabbari Nejad - Network & IT Specialist
+
+Alireza Jabbari Nejad
+Network & IT Specialist  
+Learning Network Automation & DevOps
