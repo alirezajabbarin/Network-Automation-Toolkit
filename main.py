@@ -1,10 +1,14 @@
+import csv
 import time
 
-devices = [
-    {"name": "Router-1", "ip": "192.168.1.1"},
-    {"name": "Switch-1", "ip": "192.168.1.2"},
-    {"name": "Firewall-1", "ip": "192.168.1.3"},
-]
+def load_devices(file_name):
+    devices = []
+    with open(file_name, mode='r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            devices.append(row)
+    return devices
+
 
 def check_device(device):
     print(f"Connecting to {device['name']} ({device['ip']}) ...")
@@ -19,13 +23,17 @@ def check_device(device):
     print("Gig0/1       unassigned      down")
     print("-" * 40)
 
+
 def main():
     print("Network Health Check Started\n")
+
+    devices = load_devices("devices.csv")
 
     for device in devices:
         check_device(device)
 
     print("\nAll devices checked.")
+
 
 if __name__ == "__main__":
     main()
